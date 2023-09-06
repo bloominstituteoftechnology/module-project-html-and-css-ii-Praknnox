@@ -92,8 +92,7 @@ p, h1, h2, h3, h4, h5, h6 {
     /* 👉 Task 7- Target the id headerBottom.
     Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
     #headerBottom{
-      border-bottom: 1px;
-      color: gray;
+      border-bottom: 1px solid gray;
       padding: 5px;
     }
 
@@ -109,7 +108,7 @@ p, h1, h2, h3, h4, h5, h6 {
     Give it color, bold text, background, padding, border radius, margin right, and a cursor of pointer. */
     #compost{
       color: blue;
-      background-color: aliceblue;
+      background-color: paleturquoise;
       font-weight: bold;
       padding: 7px;
       border-radius: 10px;
@@ -130,21 +129,42 @@ p, h1, h2, h3, h4, h5, h6 {
     /* 👉 Task 11- Target the button element inside the id headerBottom that has a class of active
     Make the font weight be bolder, and add a bottom border of 2 pixels solid color (you choose the color).
     Add the class name to the "All mail" button. */
+    #headerBottom button.Active{
+      border-bottom: 2px solid darkblue;
+      font-weight: bolder;
+    }
 
     /* 👉 Task 12- Target all divs directly nested inside elements with a class of email,
     and make them display as inline-block elements.
     This will make each email render all its details in the same line*/
+    .email div{
+      display: inline-block;
+    }
 
     /* 👉 Task 13- Target the elements with a class of email.
     Give them some padding, bigger padding to the left, and a bottom border of very light grey. */
+    .email{
+      padding: 10px;
+      padding-left: 20px;
+      border-bottom: 2px solid lightgray;
+    }
 
     /* 👉 Task 14- Target each div inside the element with a class of email.
     Make the email author and the email subject take 35% of the width of the parent element.
     Make the check, the date and the size take up 8% of the width of the parent element.
     This will arrange the details in visible columns. */
+    .email-name, .email-subject{
+      width: 35%;
+    }
+    .email-check, .email-size, .email-date{
+      width: 8%;
+    }
 
     /* 👉 Task 15- Target the second email and have its font weight be bold.
     This will make it look "unread". */
+    .email:nth-child(2){
+      font-weight: bold;
+    }
 
     /* Well done! Check the design file to make sure you are close enough. */
 
@@ -170,7 +190,7 @@ p, h1, h2, h3, h4, h5, h6 {
       <div id="headerBottom">
         <div id="compost">Compose</div>
         <div>
-          <button>All mail</button>
+          <button class="Active">All mail</button>
           <button>Unread</button>
           <button>Pinned</button>
           <button>VIPs</button>
